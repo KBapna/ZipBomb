@@ -35,7 +35,7 @@ create_chunk_parts() {
     trap 'cleanup' INT
 
     while [ $completed -lt $total_parts ]; do
-        dd if=/dev/zero bs=100M count=1 2>/dev/null | zip -9 -q "$part_file" - >/dev/null
+        dd if=/dev/zero bs=100M count=$total_parts 2>/dev/null | zip -9 -q "$part_file" - >/dev/null
         completed=$((completed + 1))
         if [ "$thread_id" == "0" ]; then
             overall_percentage=$((completed * 100 / total_parts))
