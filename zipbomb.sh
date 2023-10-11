@@ -26,8 +26,7 @@ create_file(){
 }
 
 file_inside_of_file(){
-    #4 layers
-    for i in {0..4}
+    for i in {0..1}
     do
         for i in {0..15}
         do
